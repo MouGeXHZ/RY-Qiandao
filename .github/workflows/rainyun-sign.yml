@@ -2,7 +2,7 @@ name: Rainyun 自动签到
 
 on:
   schedule:
-    - cron: '30 10 * * *'  # 执行时间
+    - cron: '0 2 * * *'  # UTC+8 12点执行
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: 设置Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.12'
       
       - name: 缓存Python依赖
         uses: actions/cache@v3
